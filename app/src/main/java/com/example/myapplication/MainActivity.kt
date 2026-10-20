@@ -42,7 +42,7 @@ fun AppListScreen(apps: List<AppInfo>) {
             TopAppBar(
                 title = {
                     Text(
-                        text = "Мои приложения",
+                        text = "Список приложений",
                         fontWeight = FontWeight.Bold
                     )
                 },
