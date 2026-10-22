@@ -55,7 +55,7 @@ fun AppNavigation() {
                 }
             )
         }
-        // Экран карточки
+      
         composable("details/{appId}") { backStackEntry ->
             val appId = backStackEntry.arguments?.getString("appId")?.toIntOrNull() ?: 0
             AppDetailsScreen(
