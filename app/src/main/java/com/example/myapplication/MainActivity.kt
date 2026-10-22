@@ -163,7 +163,7 @@ fun AppListItem(app: AppInfo, onClick: () -> Unit) {
                 }
             }
 
-            // НИЖНЯЯ ЧАСТЬ: Блок "Витрина"
+           
             HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.surfaceVariant)
 
             Column(modifier = Modifier.padding(bottom = 16.dp)) {
