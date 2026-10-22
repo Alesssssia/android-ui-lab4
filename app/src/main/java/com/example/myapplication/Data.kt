@@ -2,56 +2,34 @@ package com.example.myapplication
 
 import androidx.compose.ui.graphics.Color
 
-// Модель данных
 data class AppInfo(
+    val id: Int, // Добавили ID для навигации
     val name: String,
     val description: String,
     val category: String,
-    val iconColor: Color
+    val iconColor: Color,
+    val isShowcase: Boolean = false // Флаг: приложение из витрины?
 )
 
-// Список приложений (те самые данные)
+// Основной список (твои приложения)
 val mockApps = listOf(
-    AppInfo(
-        name = "Telegram",
-        description = "Быстрый и безопасный мессенджер.",
-        category = "Общение",
-        iconColor = Color(0xFF229ED9)
-    ),
-    AppInfo(
-        name = "YouTube",
-        description = "Смотрите любимые видео со всего мира.",
-        category = "Развлечения",
-        iconColor = Color(0xFFFF0000)
-    ),
-    AppInfo(
-        name = "Spotify",
-        description = "Слушайте миллионы треков и подкастов.",
-        category = "Музыка",
-        iconColor = Color(0xFF1DB954)
-    ),
-    AppInfo(
-        name = "Google Maps",
-        description = "Навигация и карты по всему миру.",
-        category = "Навигация",
-        iconColor = Color(0xFF4285F4)
-    ),
-    AppInfo(
-        name = "Notion",
-        description = "Заметки, задачи и база знаний в одном месте.",
-        category = "Продуктивность",
-        iconColor = Color(0xFF000000)
-    ),
-    AppInfo(
-        name = "Figma",
-        description = "Дизайн и прототипирование интерфейсов.",
-        category = "Работа",
-        iconColor = Color(0xFFF24E1E)
-    ),
-    AppInfo(
-        name = "Duolingo",
-        description = "Изучайте иностранные языки в игровой форме.",
-        category = "Образование",
-        iconColor = Color(0xFF58CC02)
-    )
+    AppInfo(1, "Telegram", "Быстрый и безопасный мессенджер.", "Общение", Color(0xFF229ED9)),
+    AppInfo(2, "YouTube", "Смотрите любимые видео.", "Развлечения", Color(0xFFFF0000)),
+    AppInfo(3, "Spotify", "Миллионы треков и подкастов.", "Музыка", Color(0xFF1DB954)),
+    AppInfo(4, "Google Maps", "Навигация и карты.", "Навигация", Color(0xFF4285F4)),
+    AppInfo(5, "Notion", "Заметки и база знаний.", "Продуктивность", Color(0xFF000000)),
+    AppInfo(6, "Figma", "Дизайн и прототипирование.", "Работа", Color(0xFFF24E1E))
+)
+
+// Данные для Витрины (ровно 9 штук)
+val showcaseApps = listOf(
+    AppInfo(10, "VK", "Социальная сеть.", "Общение", Color(0xFF0077FF), true),
+    AppInfo(11, "Discord", "Голосовой чат.", "Общение", Color(0xFF5865F2), true),
+    AppInfo(12, "Netflix", "Фильмы и сериалы.", "Развлечения", Color(0xFFE50914), true),
+    AppInfo(13, "Twitch", "Стримы.", "Развлечения", Color(0xFF9146FF), true),
+    AppInfo(14, "Apple Music", "Музыка.", "Музыка", Color(0xFFFA243C), true),
+    AppInfo(15, "SoundCloud", "Музыка.", "Музыка", Color(0xFFFF5500), true),
+    AppInfo(16, "Yandex Maps", "Навигация.", "Навигация", Color(0xFFFFCC00), true),
+    AppInfo(17, "Trello", "Задачи.", "Работа", Color(0xFF0079BF), true),
+    AppInfo(18, "Slack", "Рабочий чат.", "Работа", Color(0xFF4A154B), true)
 )
