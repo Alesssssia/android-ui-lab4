@@ -72,7 +72,7 @@ fun AppListScreen(apps: List<AppInfo>, onAppClick: (Int) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Мои приложения", fontWeight = FontWeight.Bold) },
+                title = { Text(text = "Мои приложения 2", fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     Box(
                         modifier = Modifier
